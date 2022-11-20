@@ -21,7 +21,7 @@
     private static void AplicarHeap(int[] vetor, int tamanho, int i)
     {
         int raiz = i;
-        int esquerda = 2 * i + 1; 
+        int esquerda = 2 * i + 1;
         int direita = 2 * i + 2;
 
 
