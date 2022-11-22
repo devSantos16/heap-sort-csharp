@@ -12,9 +12,16 @@
             AplicarHeap(vetor, tamanho, i);
         }
 
+        for(int i = tamanho - 1; i > 0; i--){
+            int aux = vetor[0];
+            vetor[0] = vetor[i];
+            vetor[i] = aux;
+            AplicarHeap(vetor, i, 0);
+        }
+
         for (int i = 0; i < tamanho; i++)
         {
-            Console.WriteLine($"{vetor[i]}");
+            Console.Write($" {vetor[i]} ");
         }
     }
 
@@ -23,8 +30,7 @@
         int raiz = i;
         int esquerda = 2 * i + 1;
         int direita = 2 * i + 2;
-
-
+        
         if (esquerda < tamanho && vetor[esquerda] > vetor[raiz])
         {
             raiz = esquerda;

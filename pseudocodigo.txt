@@ -1,22 +1,20 @@
-    inicio
+inicio
+    inteiro raiz <- i
+    inteiro esquerda <- 2 * i + 1
+    inteiro direita <- 2 * i + 2
 
-        inteiro raiz <- i
-        inteiro esquerda <- 2 * i + 1
-        inteiro direita <- 2 * i + 2
-        
-        Se esquerda < tamanho && vetor[esquerda] > vetor[raiz] então
-            raiz <- esquerda
-        fim-se
-        
-        Se direita < tamanho && vetor[direita] > vetor[raiz] então
-            raiz <- direita
-        fim-se
-        
-        Se raiz != i então
-            int aux <- vetor[i]
-            vetor[i] <- vetor[raiz]
-            vetor[raiz] <- aux
-            AplicarHeap(vetor, tamanho, raiz)
-        fim-se
+    Se esquerda < tamanho && vetor[esquerda] > vetor[raiz] então
+        raiz <- esquerda
+    fim-se
+    
+    Se direita < tamanho && vetor[direita] > vetor[raiz] então
+        raiz <- direita
+    fim-se
 
-    fim programa
+    Se raiz != i então
+        int aux <- vetor[i]
+        vetor[i] <- vetor[raiz]
+        vetor[raiz] <- aux
+        AplicarHeap(vetor, tamanho, raiz)
+    fim-se
+fim programa
